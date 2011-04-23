@@ -86,7 +86,8 @@ module OmniAuth
       def auth_hash
         OmniAuth::Utils.deep_merge(super, {
           'credentials' => {
-            'token' => @access_token.token
+            'token' => @access_token.token,
+            'refresh_token' => @access_token.refresh_token
           }
         })
       end
